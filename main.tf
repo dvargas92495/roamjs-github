@@ -51,8 +51,20 @@ module "roamjs_lambda" {
   name = "github"
   lambdas = [
     { 
-      path = "github", 
-      method = "post"
+      path = "github-cards", 
+      method = "get"
+    },
+    { 
+      path = "github-issues", 
+      method = "get"
+    },
+    { 
+      path = "github-projects", 
+      method = "get"
+    },
+    { 
+      path = "github-repositories", 
+      method = "get"
     },
   ]
   aws_access_token = var.aws_access_token
